@@ -1,0 +1,11 @@
+1. El objetivo del proyecto es crear una web donde se sume ingresos y gastos, para poder calcular el presupuesto del hogar.
+
+También me gustaría agregar el balance de forma dinámica y que los datos queden guardados en el sistema, para luego poder agregar gráficos y otros calculos (necesito más conocimiento para esto). Balance por tipo de gasto, en la parte inferior de formaulario_presupuesto.html no está resuelto. 
+
+2. La web tiene una primera página que valida datos y permite logguearse. 
+
+3. Al entrar, se deben ingresar los datos username === "hfavat"  email === "h.favat@gmail.com" && password === "123456" para que permita loguearse. 
+
+4. Para poder hacer este primer boceto funcional, he tenido que investigar sobre document.getElementById para poder connectar el html con JS, y addEventListener para poder actualizar la información en el html una vez ingresado el input. 
+
+Si bien esto no se ha visto aún en clase, me ha permitido resolver el problema y la web se ejecuta como lo había pensado. 

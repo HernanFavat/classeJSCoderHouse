@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/71f66080ee.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
+    <title>Simulador de gastos para el hogar</title>
+</head>
+<body>
+    <main>
+        <section id="simulador-de-gastos-e-ingresos">
+        <div class="container-gral-simulador-ingresasos-gastos">
+            <div class="container-Ingresos-Gral">    
+                <div class="containerIngresos">
+                    <h1>Cuales son tus ingresos?</h1>
+                    <div class="containerCategoriasIngresos">
+                        <div class="Salarios"></div> 
+                            <label for="Salario Familiar">Salario Familiar</label>    
+                            <input id="Salario Familiar" type="number" maxlength="128" name="Salario Familiar" value="0" class="aa ab ac ad">
+                        </div> 
+                        <div class="inversiones">
+                            <label for="Inversiones">Inversiones</label>    
+                            <input id="Inversiones" type="number" name="Inversiones" value="0" class="aa ab ac ad">
+                        </div>
+                        <div class="Otros Ingresos">
+                            <label for="Otros Ingresos">Otros Ingresos</label>    
+                            <input id="Otros Ingresos" type="number" name="Otros Ingresos" value="0" class="aa ab ac ad">
+                        </div> 
+                    </div> 
+                </div>
+               
+            <div class="container-gastos-gral">
+            <h1>Cuales son tus gastos?</h1>
+            <ul class="container-gastos">
+                <li class="gasto-del-hogar-container">
+                    <div class="gasto-del-hogar-container-titulo-gastos-del-hogar">
+                        <span class="titulo-gastos-del-hogar-dropdown">
+                            <button type="button" aria-expanded="false" aria-controls="gastos-del-hogar-target" class="lista-de-gastos" id="Gastos-del-hogar">
+                            <span class="ab b ei">Gastos del hogar</span>                          
+                            </button>
+                        </span>
+                    </div>
+                            <div class="dropdown-content-gastos-del-hogar" aria-labelledby="Gastos del hogar" aria-hidden="false">
+                            <ul class="ay b c ze">
+                                    <li>
+                                        <label for="Hipoteca-del-hogar-Alquiler">Hipoteca del hogar/Alquiler</label>    
+                                        <input id="Hipoteca-del-hogar-Alquiler" type="number" maxlength="128" name="Hipoteca-del-hogar-Alquiler" value="0" class="ba bc bd be">
+                                    </li>
+                                    <li>
+                                        <label for="Agua">Agua</label>    
+                                        <input id="Agua" type="number" name="Agua" value="0" class="ba bc bd be">
+                                    </li>
+                                    <li>
+                                        <label for="Electricidad">Electricidad</label>    
+                                        <input id="Electricidad" type="number" maxlength="128" name="Electricidad" value="0" class="ba bc bd be">
+                                    </li>
+                                    <li>
+                                        <label for="Gas">Gas</label>    
+                                        <input id="Gas" type="number" name="Gas" value="0" class="ba bc bd be">
+                                    </li>
+                                    <li>
+                                        <label for="Mantenimiento-del-hogar">Mantenimiento del hogar</label>    
+                                        <input id="Mantenimiento-del-hogar" type="number" name="Mantenimiento-del-hogar" value="0" class="ba bc bd be">
+                                    </li>  
+                                <div class="totalResultado">
+                                    <p class="Total">Total</p>
+                                    <p id="resultado-hogar"></p>
+                                </div>                         
+                </li>
+                <li class="transporte-container">
+                    <div class="transporte-container-titulo-transporte">
+                        <span class="titulo-transporte-dropdown">
+                            <button type="button" aria-expanded="false" aria-controls="transporte" class="lista-de-gastos" id="trasporte">
+                                <span class="ab b ei">Gastos de transporte</span>
+                            </button>
+                        </span>
+                    </div>
+                </li>
+                        <div class="dropdown-content-trasporte" aria-labelledby="Trasporte" aria-hidden="false">
+                                <ul class="ay b c ze">
+                                    <li>
+                                        <label for="Seguro-coche">Seguro coche</label>    
+                                        <input id="Seguro-coche" type="number" maxlength="128" name="Seguro-coche" value="0" class="ba bc bd be" >
+                                    </li>
+                                    <li>
+                                        <label for="Seguro-moto">Seguro moto</label>    
+                                        <input id="Seguro-moto" type="number" name="Agua" value="0" class="ba bc bd be" >
+                                    </li>
+                                    <li>
+                                        <label for="Gasolina-coche">Gasolina coche</label>    
+                                        <input id="Gasolina-coche" type="number" maxlength="128" name="Gasolina-coche" value="0" class="ba bc bd be" >
+                                    </li>
+                                    <li>
+                                        <label for="Gasolina-moto">Gasolina moto</label>    
+                                        <input id="Gasolina-moto" type="number" name="Gasolina-moto" value="0" class="ba bc bd be">
+                                    </li>
+                                    <li>
+                                        <label for="Gastos-varios-ambos-vehiculos">Gastos varios ambos vehiculos</label>    
+                                        <input id="Gastos-varios-ambos-vehiculos" type="number" name="Gastos-varios-ambos-vehiculos" value="0" class="ba bc bd be">
+                                    </li> 
+                                <div class="totalResultado">
+                                    <p class="Total">Total</p>
+                                    <p id="resultado-transporte"></p>
+                                </div>
+                                </ul>     
+                        </div>    
+                </li>
+            </ul>
+            </div> 
+            <div class="container-gral-resultados-ingresasos-gastos">
+                <div class="resumen-con-resultados">
+                    <h2 class="resultados-titulo">Resultados</h2>
+
+                        <div class="resultado-ingresos-totales">
+                            <span>Ingresos totales</span>
+                            <span id="resultado-numerico-ingresos-totales"></span>
+                        </div>
+
+                        <div class="resultado-gastos-totales">
+                            <span>Gastos totales</span>
+                            <span id="resultado-numerico-gastos-totales"></span>
+                            <hr class="separador-linea">
+                        </div>
+                        <div class="balance-final-delmes">Balance final del mes
+                            <h2 id="resultado-numerico-balance"></h2>
+    
+                        </div>    
+                </div>      
+                    <h3 class="titulo-balance-por-tipo-de-gasto">
+                        Balance por tipo de gasto
+                    </h3>
+                    <span class="texto-balance">Así es como tus ingresos se reparten a través de las distintas categorías</span>
+                    <a class="barra-%-gastos-del-hogar" href="#item-Gastos del hogar" aria-label="Gastos del hogar">
+                        <div class="gastos-del-hogar-barra"></div>
+                            <span>Gastos del hogar</span>
+                            <span>
+                                0 %
+                            </span>
+                        </div>    
+                    </a>
+                    <a class="barra-%-gastos-de-transporte" href="#item-trasporte" aria-label="Gastos de trasporte">
+                        <div class="gastos-del-hogar-barra"></div>
+                            <span>Gastos de transporte</span>
+                            <span>
+                                0 %
+                            </span>
+                        </div>    
+                    </a> 
+                </div>
+            </div>  
+        </section>
+    </main>
+    <script src="formulario_presupuesto.js"></script>
+
+</body>
+</html>
