@@ -1,3 +1,5 @@
+PRIMERA Entrega 15/12 notas
+
 1. El objetivo del proyecto es crear una web donde se sume ingresos y gastos, para poder calcular el presupuesto del hogar.
 
 También me gustaría agregar el balance de forma dinámica y que los datos queden guardados en el sistema, para luego poder agregar gráficos y otros calculos (necesito más conocimiento para esto). Balance por tipo de gasto, en la parte inferior de formaulario_presupuesto.html no está resuelto. 
@@ -9,3 +11,31 @@ También me gustaría agregar el balance de forma dinámica y que los datos qued
 4. Para poder hacer este primer boceto funcional, he tenido que investigar sobre document.getElementById para poder connectar el html con JS, y addEventListener para poder actualizar la información en el html una vez ingresado el input. 
 
 Si bien esto no se ha visto aún en clase, me ha permitido resolver el problema y la web se ejecuta como lo había pensado. 
+
+-------------------------------------------------------------------------------------------
+
+SEGUNDA Entrega 12/22 notas 
+
+1. He agregado la clase Usuario para guardar toda la info que se ingrese en los inputs (user name, email y password) creando así una mini base de datos. 
+
+2. Tuve que investigar que metodo usar para guardar el usuario validado, ya que no me vinculaba la clase loggin con la de Usuarios al pasar la condición que te hace loguarte y pasar de página. He usado el método Object.assign. De esta forma me actualiza el array. 
+
+3. He configurado los intentos validos hasta 3, al no poder integrar un FOR or WHILE para gestionarlo, he podido encontrar una forma que parece más sensilla, inicialicé los attempts:
+
+class Loggin {
+    constructor() {
+        // Inicializamos las propiedades de los intentos
+        this.attempts = 0;
+        this.maxAttempts = 3;
+    }
+}
+
+Y luego le pase la condición dentro de la funcion IralFormulario() :
+
+if (this.attempts === this.maxAttempts) {
+                alert("Has alcanzado la cantidad de intentos. Tu cuenta queda bloqueada por 24 hrs, intentalo más tarde, por favor!.");}
+
+4. Queda pendiente:
+    4.a) DEjar bloqueado el acceso por cierta cantidad de tiempo (en mi alert son 24 hrs, pero podrían ser 15 minutos luego de 3 intentos)
+
+    4.b) No he podido guardar el intento correcto username === "hfavat"  email === "h.favat@gmail.com" && password === "123456" en el array. Necesito entender porque me borra la consola y me imprimi lo de la nueva pagina. 

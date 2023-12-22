@@ -14,24 +14,25 @@
     <main>
         <h1>Bienvenido</h1>
         <h2>Este es el nuevo simulador de presupuesto para tu hogar</h2>
-            <br>
-            <p>Por favor ingresa tus datos para entrar en tu cuenta</p>    
-            <br>
+        <br>
+        <p>Por favor ingresa tus datos para entrar en tu cuenta</p>    
+        <br>
         
-    <section>
-        <label for="username">Username:</label>
-        <input type="text" id="username" placeholder="Enter your username">
+        <form id="formulario">
+            <fieldset>
+                <label for="username">Username:</label>
+                <input type="text" id="username" placeholder="Enter your username">
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Enter your email">
+                
+                <label for="password">Password:</label>
+                <input type="password" id="password" placeholder="Enter your password">
             
-        <label for="email">Email:</label>
-        <input type="email" id="email" placeholder="Enter your email">
-            
-        <label for="password">Password:</label>
-        <input type="password" id="password" placeholder="Enter your password">
-        
-        <button id="login" onclick="usuarioConCuenta.IralFormulario()">Ingresar</button>
-        <img src="https://amigoinversor.com/wp-content/uploads/2021/03/buy-home-house-is-placed-on-the-calculator-KBBD6YT.jpg" alt="Simulador de presupuesto para el hogar">
-        </a> 
-    </section>
+                <button id="login">Ingresar</button>
+            </fieldset>
+            <img src="https://amigoinversor.com/wp-content/uploads/2021/03/buy-home-house-is-placed-on-the-calculator-KBBD6YT.jpg" alt="Simulador de presupuesto para el hogar">
+        </form>
     </main> 
     <script src="login_page.js"></script>
 </body>

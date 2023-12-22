@@ -1,6 +1,6 @@
 console.log("Script loaded!");
 
-// Function to update the results
+// Funcion para actualizar los resultados
 function updateResults() {
     let ingresos = calcularIngresos();
     let gastosHogar = calcularGastosHogar();
@@ -8,7 +8,7 @@ function updateResults() {
     let resultadoGastosTotal = gastosHogar + gastosTrasporte;
     let balanceFinalDelMes = ingresos - resultadoGastosTotal;
 
-    // Update the result elements
+    // ACTUALIZAR el resultado de los elementos
     document.getElementById("resultado-numerico-ingresos-totales").innerHTML = ingresos;
     document.getElementById("resultado-hogar").innerHTML = gastosHogar;
     document.getElementById("resultado-transporte").innerHTML = gastosTrasporte;
@@ -68,5 +68,5 @@ document.getElementById("Gasolina-coche").addEventListener("input", updateResult
 document.getElementById("Gasolina-moto").addEventListener("input", updateResults);
 document.getElementById("Gastos-varios-ambos-vehiculos").addEventListener("input", updateResults);
 
-// Initial calculation
+// iniciar calculos
 updateResults();

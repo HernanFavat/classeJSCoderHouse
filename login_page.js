@@ -1,38 +1,88 @@
-// CLASES 5 de JS, forma más estructurada y elegible sobre como introducir objetos
-// ES LA FORMA MODERNA DE HACER TODO LO ANTERIOR, NACIERON EN ECMA6
+class Usuarios{
+    constructor(usernameInput, emailInput, passwordInput){
+        this.usernameInput = usernameInput;
+        this.emailInput = emailInput;
+        this.passwordInput = passwordInput;
+    }
+}
+
+const arrayUsers = [];
+const formulario = document.getElementById("formulario");
+
+formulario.addEventListener("submit", (e)=>{ 
+    // Prevenimos que la página se resete
+    e.preventDefault();
+
+    const usernameInput = document.getElementById("username").value.toLowerCase();
+    const emailInput = document.getElementById("email").value;
+    const passwordInput = document.getElementById("password").value;
+
+    // verificamos por consola que todo este correcto
+    console.log("El userName ingresado es: " + usernameInput);
+    console.log("El email ingresado es: " + emailInput);
+    console.log("El password ingresado es: " + passwordInput);
+
+//  crear los objetos de users:
+const usuarios = new Usuarios(usernameInput, emailInput, passwordInput);
+arrayUsers.push(usuarios);
+
+// Verificamos el arrray
+console.log(arrayUsers);
+// reseteo de campos loggin
+ formulario.reset();
+
+});
 
 class Loggin {
     constructor() {
-        // Iniciaré las propiedades en la función con los valores ingresados en la pagina por el usuario
+        // Inicializamos las propiedades de los intentos
+        this.attempts = 0;
+        this.maxAttempts = 3;
     }
 
     IralFormulario() {
-        // Función solicitando info de los elementos
-        const username = document.getElementById("username").value.toLowerCase();
-        const email = document.getElementById("email").value;
-        const password = document.getElementById("password").value;
-        const message = "Login successful!"; 
-        const alertIncorrectData = "Your data is incorrect. Please try again!"
-        // If de la función donde paso valores de la cuenta del cliente, sin estos no se podrá loguear. 
+        // VAmos incrementando los intentos con ++
+        this.attempts++;
 
-        if (username === "hfavat" && email === "h.favat@gmail.com" && password === "123456") {
+        // Conseguimos los datos del usuario
+        const usernameInput = document.getElementById("username").value.toLowerCase();
+        const emailInput = document.getElementById("email").value;
+        const passwordInput = document.getElementById("password").value;
+       
+        // Variable para mensajes
+        const message = "Login successful!";
+        const alertIncorrectData = "Your data is incorrect. Please try again!";
+
+        // Validamos que los imputs están correctos
+        if (usernameInput === "hfavat" && emailInput === "h.favat@gmail.com" && passwordInput === "123456") {
             alert("Login successful!");
-            console.log(`Has entrado con los siguientes datos: ${username} ${email} ${password}`)
             console.log(`${message}`)
-            // ejecuto la siguiente propiedad para que se loguee
+
+             // Creo una nueva instancia de Usuarios y guarda la info en usuariosDataBase 
+            //  Tuve que investigar que metodo usar para guardar el usuario validado 
+             const usuarioData = new Usuarios(usernameInput, emailInput, passwordInput);
+             Object.assign(usuariosDatabase, usuarioData);
+            
+            // Y si están correctos lo mandamos al formulario
             window.location.href = "file:///C:/Users/34691/Desktop/Projecto_Final/formulario_presupuesto.html";
 
-            // Si esta lógica no se ejecuta con los datos dados, hago un alert para que el usuario vuelva a intentarlo. 
-
+            // Si no están correctos, limpiamos los valores en los inputs, luego de un alert
         } else {
             alert(`${alertIncorrectData}`);
-            console.log("You need to enter the correct data to log in");
+            console.log("Por favor entra los datos correctos para loguearte");
+            // sin usar loops, usamos el atributo Attempts para definir la cantida de opciones
+            if (this.attempts === this.maxAttempts) {
+                alert("Has alcanzado la cantidad de intentos. Tu cuenta queda bloqueada por 24 hrs, intentalo más tarde, por favor!.");
+            }
         }
     }
 }
 
-// Create an instance of the Loggin class
-const usuarioConCuenta = new Loggin 
+// Crear una instancia de Loggin
+const usuarioConCuenta = new Loggin();
+const usuariosDatabase = new Usuarios();
 
-// Llamo al elemento id "login" que ya está ejecutado en html
-const loginButton = document.getElementById("login") 
+const loginButton = document.getElementById("login");
+loginButton.addEventListener("click", () => {
+usuarioConCuenta.IralFormulario();
+}); 
