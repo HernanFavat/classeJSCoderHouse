@@ -1,5 +1,3 @@
-console.log("Script loaded!");
-
 // Funcion para actualizar los resultados
 function updateResults() {
     let ingresos = calcularIngresos();

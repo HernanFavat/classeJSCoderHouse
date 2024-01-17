@@ -39,3 +39,26 @@ if (this.attempts === this.maxAttempts) {
     4.a) DEjar bloqueado el acceso por cierta cantidad de tiempo (en mi alert son 24 hrs, pero podrían ser 15 minutos luego de 3 intentos)
 
     4.b) No he podido guardar el intento correcto username === "hfavat"  email === "h.favat@gmail.com" && password === "123456" en el array. Necesito entender porque me borra la consola y me imprimi lo de la nueva pagina. 
+
+
+    -------------------------------------------------------------------------------------------
+    TERCERA Entrega 17/01 notas 
+
+    1. EN esta entrega sigo trabajando más la parte del Acceso al usuario a su cuenta, agregando algunas de las cosas que hemos estado viendo. Aquí podrás ver aplicado, sweetalert combinados con setTimeout así como también storage de la info de usuario validado.   
+
+    2. El uso de sweetalert lo combine con setTimeOut porque si no desaparecia muy rápido al pasar de una página a otra, por lo que el USE CASE para testearlo quedaría así:
+
+       *  Si le das al boton Acceso Cliente sin ingresar datos, aparece un pop up informativo "Debes ingresar los datos solicitados para loguearte en tu cuenta" con el link (que aun no funciona) para sugerirte de crear una cuenta. 
+
+       * Si ingresas credenciales incorrectas, las 3 primeras veces aparecerá un pop up de error "Por favor ingresa los datos correctos para loguearte" con el link (que aun no funciona) para sugerirte de crear una cuenta. 
+
+       * A la 4 vez que lo intentas, incorporé otro pop up de bloqueo de cuenta, no hay código que sustente el bloqueo de cuenta obviamente, no se como se gestiona esto realmente de todas formas a nivel de código y de seguridad. Pero el pop up está incorporado y respeta la condición. 
+
+       * Si ingresas los datos correctos  nombreDeUsuarioInput === "hfavat" && emailInput === "h.favat@gmail.com" && contraseñaInput === "123456", un nuevo pop up te pedirá si quieres guardar los datos, si selecionas "Guardar" Nombre de Usuario y email quedarán guardados y estarás logueado, si seleccionas "No, gracias" los datos no se guardan en los inputs pero estarás igualmente logueado. 
+
+       * Lo que no he podido aun resolver es el boton OKA, una vez has puesto "Guardar" o "No, Gracias". Es decir, va a la nueva pagina aunque no lo aceptes, entiendo que allí falta una condición. 
+
+    3. He actualizado todos los nombres que me has sugerido, pasado todo a español he intentando tener mejores nombres para variables, etc. Aunque todavía creo que puede ser mejorable. 
+
+    4. Tengo la sensación de que puede haber cosas redundantes en el código o maneras de simplificarlo, algunas de las que hemos visto, por lo cual cualquier feedback bienvenido. 
+
