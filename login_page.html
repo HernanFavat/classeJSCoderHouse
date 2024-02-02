@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/71f66080ee.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    
+    <link rel="stylesheet" href="login_page.css">
     <title>Simulador de presupuesto para el hogar</title>
 </head>
 <body>
@@ -22,21 +21,23 @@
         
         <form id="formulario">
             <fieldset>
-                <label for="nombre_de_usuario">Nombre de Usuario:</label>
-                <input type="text" id="nombre_de_usuario" placeholder="Entra tu nombre de usuario">
-                
+
                 <label for="email">Email:</label>
                 <input type="email" id="email" placeholder="Ingresa tu email">
+
+                <label for="nombre_de_usuario">Nombre de Usuario:</label>
+                <input type="text" id="nombre_de_usuario" placeholder="Entra tu nombre de usuario">
                 
                 <label for="contraseña">Contraseña:</label>
                 <input type="password" id="contraseña" placeholder="Ingresa tu contraseña">
 
                 <button id="ingresar">Acceso Cliente</button>
-                <button id="crear_cuenta">Crear cuenta</button>
+                <button id="crear_cuenta" onclick="crearCuenta()">Crear cuenta</button>
             </fieldset>
             <img src="https://amigoinversor.com/wp-content/uploads/2021/03/buy-home-house-is-placed-on-the-calculator-KBBD6YT.jpg" alt="Simulador de presupuesto para el hogar">
         </form>
     </main>
+
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> 
     <script src="login_page.js"></script>
 </body>

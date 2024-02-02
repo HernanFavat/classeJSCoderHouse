@@ -62,3 +62,20 @@ if (this.attempts === this.maxAttempts) {
 
     4. Tengo la sensación de que puede haber cosas redundantes en el código o maneras de simplificarlo, algunas de las que hemos visto, por lo cual cualquier feedback bienvenido. 
 
+
+    -------------------------------------------------------------------------------------------
+    TERCERA Entrega 03/02 notas
+
+    1. En esta entrega he estado trabajando loggin, la página de crear cuenta, y el formulario para el presupuesto, así como también probando cosas en CSS, pero claramente necesito trabajar en eso. 
+
+    1a. Loggin: habilité el btn crear cuenta, el resto del código y la validación se mantienen como fue explicado en mi ultima presentanción. 
+
+    1b. Crear Cuenta, hago fetch para conectar con la API de usuarios en https://jsonplaceholder.typicode.com/users, la idea es simular una base de datos y que en función de eso te permite crear o no una cuenta. 
+    
+    Por ejemplo, si quieres crear una cuenta con el email Nathan@yesenia.net te saldrá un pop up comentando que ese email ya existe. Creando una cuenta con otra info te dejará pasar al formulario de presupuesto. registeredUser quedada guardado en storage con la info del usuario, si bien hice está acción la idea era poder incluir en el formulario presupuesto el nombre del usuario como un pequeño titulo arriba a la derecha.No está implementado. 
+
+    1.c El formulario presupuesto es lo más complejo que he intentado hacer, y la verdad me ha demandado demasiado tiempo para resolver, no está resuelto 100 %. La idea es usar un port local 3000 que permite guardar la información que va calculando el formulario al ingresar datos. El formulario suma, y resta, al cliquear en guardar datos te indica el mes en el que los datos están guardados.
+
+    El problema que encontré acá es que no he podido hacer el valor total ingresos, gastos y balance se guarden siempren, y que al limpiar los imputs de valores y volver agregar valores esta información se sume a los totales, en el file Underfined de la carpeta Data si lo hace y lo suma, sin emabargo el file data_February.json ha guardado información que no tengo ni idea que es. 
+
+    Si activas el server local, el formulario guarda la info y realiza conección. He creado el server.js para eso 

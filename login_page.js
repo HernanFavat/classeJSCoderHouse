@@ -1,3 +1,7 @@
+function crearCuenta(){
+    window.location.href = "file:///C:/Users/34691/Desktop/Projecto_Final/crearCuenta_formulario.html";
+}
+
 // Creo una clase usuarios para crear los objetos
 class Usuario {
     constructor(nombreDeUsuarioInput, emailInput, contraseñaInput) {

@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="formulario_presupuesto.css">
     <title>Simulador de gastos para el hogar</title>
 </head>
 <body>
@@ -16,7 +17,7 @@
         <div class="container-gral-simulador-ingresasos-gastos">
             <div class="container-Ingresos-Gral">    
                 <div class="containerIngresos">
-                    <h1>Cuales son tus ingresos?</h1>
+                    <h1>¿Cuales son tus ingresos?</h1>
                     <div class="containerCategoriasIngresos">
                         <div class="Salarios"></div> 
                             <label for="Salario Familiar">Salario Familiar</label>    
@@ -30,11 +31,9 @@
                             <label for="Otros Ingresos">Otros Ingresos</label>    
                             <input id="Otros Ingresos" type="number" name="Otros Ingresos" value="0" class="aa ab ac ad">
                         </div> 
-                    </div> 
-                </div>
-               
+                </div>    
             <div class="container-gastos-gral">
-            <h1>Cuales son tus gastos?</h1>
+            <h1>¿Cuales son tus gastos?</h1>
             <ul class="container-gastos">
                 <li class="gasto-del-hogar-container">
                     <div class="gasto-del-hogar-container-titulo-gastos-del-hogar">
@@ -44,9 +43,9 @@
                             </button>
                         </span>
                     </div>
-                            <div class="dropdown-content-gastos-del-hogar" aria-labelledby="Gastos del hogar" aria-hidden="false">
+                    <div class="dropdown-content-gastos-del-hogar" aria-labelledby="Gastos del hogar" aria-hidden="false">
                             <ul class="ay b c ze">
-                                    <li>
+                                <li>
                                         <label for="Hipoteca-del-hogar-Alquiler">Hipoteca del hogar/Alquiler</label>    
                                         <input id="Hipoteca-del-hogar-Alquiler" type="number" maxlength="128" name="Hipoteca-del-hogar-Alquiler" value="0" class="ba bc bd be">
                                     </li>
@@ -111,25 +110,11 @@
                 </li>
             </ul>
             </div> 
+        </div>
+        
+        <button id="guardarBtn">Guardar datos</button>
+        <button id="borrarBtn">Borrar datos</button>
             <div class="container-gral-resultados-ingresasos-gastos">
-                <div class="resumen-con-resultados">
-                    <h2 class="resultados-titulo">Resultados</h2>
-
-                        <div class="resultado-ingresos-totales">
-                            <span>Ingresos totales</span>
-                            <span id="resultado-numerico-ingresos-totales"></span>
-                        </div>
-
-                        <div class="resultado-gastos-totales">
-                            <span>Gastos totales</span>
-                            <span id="resultado-numerico-gastos-totales"></span>
-                            <hr class="separador-linea">
-                        </div>
-                        <div class="balance-final-delmes">Balance final del mes
-                            <h2 id="resultado-numerico-balance"></h2>
-    
-                        </div>    
-                </div>      
                     <h3 class="titulo-balance-por-tipo-de-gasto">
                         Balance por tipo de gasto
                     </h3>
@@ -151,6 +136,24 @@
                         </div>    
                     </a> 
                 </div>
+                <div class="resumen-con-resultados">
+                    <h2 class="resultados-titulo">Resultados</h2>
+
+                        <div class="resultado-ingresos-totales">
+                            <span>Ingresos totales</span>
+                            <span id="resultado-numerico-ingresos-totales"></span>
+                        </div>
+
+                        <div class="resultado-gastos-totales">
+                            <span>Gastos totales</span>
+                            <span id="resultado-numerico-gastos-totales"></span>
+                            <hr class="separador-linea">
+                        </div>
+                        <div class="balance-final-delmes">Balance final del mes
+                            <h1 id="resultado-numerico-balance"></h1>
+                            <p id="mes-actual"></p>
+                        </div>    
+                </div>    
             </div>  
         </section>
     </main>
